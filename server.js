@@ -24,10 +24,6 @@ client.on('message', (channel, tags, message, self) => {
     console.log(`${tags['display-name']}: ${message}`)
 });
 
-const axios = require('axios');
-let globalBadges = {};
-let channelBadges = {};
-
 // Create HTTP server and bind it with Express app
 const http = require('http');
 const server = http.createServer(app);
