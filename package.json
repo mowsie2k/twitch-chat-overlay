@@ -4,6 +4,7 @@
   "description": "A custom Twitch chat overlay in Node.js built for twitch.tv/mowsie2k",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
