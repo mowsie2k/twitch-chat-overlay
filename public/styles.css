@@ -28,4 +28,54 @@
 
 body {
     font-family: 'MesloLGS NF', sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+#terminal {
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    /* width: 80%; */
+    margin: auto;
+}
+
+#title-bar {
+    background-color: grey;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buttons {
+    display: flex;
+}
+
+.button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+#close {
+    background-color: #ff605c;
+}
+
+#minimize {
+    background-color: #ffbd44;
+}
+
+#fullscreen {
+    background-color: #00ca4e;
+}
+
+#chat {
+    padding: 10px;
 }
