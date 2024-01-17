@@ -28,7 +28,7 @@
         var socket = io();
         socket.on('chat message', function(msg) {
             var chatDiv = document.getElementById('chat');
-            chatDiv.innerHTML += `<p>╭─    ~ ▓▒░<br>╰─ ${msg.name}: ${msg.message}</p>`;
+            chatDiv.innerHTML += `<p>╭─    ~ ▓▒░<br>╰─ <span style="color: ${msg.color};">${msg.name}</span>: ${msg.message}</p>`;
         });
     </script>
 </body>

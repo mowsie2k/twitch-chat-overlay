@@ -24,6 +24,10 @@ client.on('message', (channel, tags, message, self) => {
     console.log(`${tags['display-name']}: ${message}`)
 });
 
+const axios = require('axios');
+let globalBadges = {};
+let channelBadges = {};
+
 // Create HTTP server and bind it with Express app
 const http = require('http');
 const server = http.createServer(app);
@@ -33,7 +37,8 @@ const { Server } = require('socket.io');
 const io = new Server(server);
 client.on('message', (channel, tags, message, self) => {
     if(self) return;
-    io.emit('chat message', { name: tags['display-name'], message: message });
+    const nameColor = tags.color || "#FFFFFF";
+    io.emit('chat message', { name: tags['display-name'], message: message, color: nameColor });
 });
 
 // Serve index.html for root route
