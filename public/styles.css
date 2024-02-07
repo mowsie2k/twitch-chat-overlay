@@ -1,95 +1,76 @@
 @font-face {
-    font-family: 'MesloLGS NF';
-    src: url('https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "MesloLGS NF";
+  src: url("../fonts/MesloLGS NF Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face {
-    font-family: 'MesloLGS NF';
-    src: url('https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MesloLGS NF';
-    src: url('https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'MesloLGS NF';
-    src: url('https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    font-family: 'MesloLGS NF', sans-serif;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: "MesloLGS NF", sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #terminal {
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    min-height: 100%;
-    min-width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  min-height: 100%;
+  min-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #title-bar {
-    background-color: rgba(239, 240, 241);
-    color: rgba(74, 74, 75);
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
+  background-color: rgba(239, 240, 241);
+  color: rgba(74, 74, 75);
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
 }
 
 #title {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #buttons {
-    display: flex;
+  display: flex;
 }
 
 .button {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
 #close {
-    background-color: #ff605c;
+  background-color: #ff605c;
 }
 
 #minimize {
-    background-color: #ffbd44;
+  background-color: #ffbd44;
 }
 
 #fullscreen {
-    background-color: #00ca4e;
+  background-color: #00ca4e;
 }
 
 #chat {
-    padding: 10px;
-    height: 100%;
+  padding: 10px;
+  height: 100%;
 }
