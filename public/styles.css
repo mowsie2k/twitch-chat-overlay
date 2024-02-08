@@ -25,7 +25,9 @@ body {
 #terminal {
   border-radius: 10px;
   overflow: hidden;
-  background-color: rgba(40, 42, 54, 0.6);
+  background-color: rgba(40, 42, 54, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: white;
   min-height: 100%;
   min-width: 100%;
