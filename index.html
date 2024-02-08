@@ -1,36 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Twitch Chat Overlay</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
+  </head>
 
-    </style>
-</head>
-
-<body>
-
+  <body>
     <div id="terminal">
-        <div id="title-bar">
-            <div id="buttons">
-                <div class="button" id="close"></div>
-                <div class="button" id="minimize"></div>
-                <div class="button" id="fullscreen"></div>
-            </div>
-            <div id="title">mowsie2k</div>
+      <div id="title-bar">
+        <div id="buttons">
+          <div class="button" id="close"></div>
+          <div class="button" id="minimize"></div>
+          <div class="button" id="fullscreen"></div>
         </div>
-        <div id="chat"></div>
+        <div id="title">mowsie2k</div>
+      </div>
+      <div id="chat"></div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        var socket = io();
-        socket.on('chat message', function(msg) {
-            var chatDiv = document.getElementById('chat');
-            chatDiv.innerHTML += `<p>╭─    ~ ▓▒░<br>╰─ <span style="color: ${msg.color};">${msg.name}</span>: ${msg.message}</p>`;
-        });
+      var socket = io();
+      socket.on("chat message", function (msg) {
+        var chatDiv = document.getElementById("chat");
+        chatDiv.innerHTML += `<p>╭─   /Users/<span style="color: ${msg.color};">${msg.name}</span>:<br>╰─ ${msg.message}</p>`;
+      });
     </script>
-</body>
-
+  </body>
 </html>
