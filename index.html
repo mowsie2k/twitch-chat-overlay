@@ -25,6 +25,7 @@
       socket.on("chat message", function (msg) {
         var chatDiv = document.getElementById("chat");
         chatDiv.innerHTML += `<p>╭─   /Users/<span style="color: ${msg.color};">${msg.name}</span>:<br>╰─ ${msg.message}</p>`;
+        chatDiv.scrollTop = chatDiv.scrollHeight;
       });
     </script>
   </body>

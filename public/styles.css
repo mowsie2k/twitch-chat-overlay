@@ -73,4 +73,17 @@ body {
 #chat {
   padding: 10px;
   height: 100%;
+  overflow-y: auto;
+}
+
+#chat {
+  /* ms browsers */
+  -ms-overflow-style: none;
+  /* firefox */
+  scrollbar-width: none;
+}
+
+#chat::-webkit-scrollbar {
+  /* chrome safari opera */
+  display: none;
 }
