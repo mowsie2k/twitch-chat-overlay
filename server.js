@@ -18,12 +18,9 @@ const options = {
   },
   channels: ["mowsie2k"],
 };
+
 const client = new tmi.Client(options);
 client.connect();
-client.on("message", (channel, tags, message, self) => {
-  if (self) return;
-  console.log(`${tags["display-name"]}: ${message}`);
-});
 
 // Create HTTP server and bind it with Express app
 const http = require("http");
@@ -40,6 +37,7 @@ client.on("message", (channel, tags, message, self) => {
     message: message,
     color: nameColor,
   });
+  console.log(`${tags["display-name"]}: ${message}`);
 });
 
 // Serve index.html for root route
