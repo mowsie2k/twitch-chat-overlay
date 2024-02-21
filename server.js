@@ -1,12 +1,13 @@
+// setup
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Serve static files from the 'public' directory
+// serve static files from the 'public' directory
 app.use(express.static("public"));
 app.use("/fonts", express.static("fonts"));
 
-// Twitch IRC setup
+// twitch irc setup
 const tmi = require("tmi.js");
 const options = {
   options: {
@@ -22,11 +23,11 @@ const options = {
 const client = new tmi.Client(options);
 client.connect();
 
-// Create HTTP server and bind it with Express app
+// create http server and bind it with express app
 const http = require("http");
 const server = http.createServer(app);
 
-// Socket.IO setup
+// socket.io setup
 const { Server } = require("socket.io");
 const io = new Server(server);
 client.on("message", (channel, tags, message, self) => {
@@ -40,12 +41,12 @@ client.on("message", (channel, tags, message, self) => {
   console.log(`${tags["display-name"]}: ${message}`);
 });
 
-// Serve index.html for root route
+// serve index.html for root route
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-// Listen on provided port
+// listen on provided port
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
